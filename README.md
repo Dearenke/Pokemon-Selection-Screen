@@ -1,14 +1,14 @@
-## preface
+## Preface
 You are advised to install dependencies using yarn
 
-## install dependencies
+## Install Dependencies
 yarn
 
-## start
+## Start
 yarn start
 
 ## ESLint Code Detection
 yarn format
 
-## build
+## Build
 yarn build
