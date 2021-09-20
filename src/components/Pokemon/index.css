@@ -1,0 +1,36 @@
+.sprites {
+    display: flex;
+    border: 1px solid skyblue;
+    background-color: #3b76aa;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 120px;
+    width: 100%;
+    cursor: pointer;
+}
+.sprites img {
+    background-color: #27445e;
+    margin-right: 15px;
+}
+.sprites p {
+    color: #fff;
+}
+
+.des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checked {
+    background-color: #7ac66c;
+}
+.checked img {
+    background-color: #58a55c;
+}
+
+.experienceBox {
+    border: 1px solid #fff ;
+    border-radius: 5px;
+    margin-top: 5px;
+}
