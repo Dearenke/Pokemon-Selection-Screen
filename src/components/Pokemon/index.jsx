@@ -3,6 +3,7 @@ import './index.css';
 
 function Pokemon(props) {
     const { data = {}, style = {}, checked = false } = props;
+    console.log('%c让我康康 Pokemon', 'border-radius:3px;background:#000;color:#f6e387;padding: 2px 5px');
     return (
         <div className={`sprites ${checked ? ' checked' : ''}`} style={{ ...style }}>
             <div style={{ width: 140 }}>
@@ -32,7 +33,7 @@ function Pokemon(props) {
 }
 
 const isEqual = (prePorps, nextProps) => {
-    if (prePorps.checked === nextProps.checked) {
+    if ((prePorps.checked === nextProps.checked) && (prePorps.data.name === nextProps.data.name)) {
         return true;
     }
     return false;
