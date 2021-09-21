@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import store from 'store';
 import actions from 'store/actions/home';
-import Pokemon from 'components/Pokemon/index';
+import Pokemon from 'components/Pokemon';
 import styles from './index.module.css';
 
 export default function Home() {
@@ -24,14 +24,8 @@ export default function Home() {
     }, [refresh]);
 
     useEffect(() => {
-        if (!data.squirtle) {
-            store.dispatch(actions.getSquirtle());
-        }
-        if (!data.charmander) {
-            store.dispatch(actions.getCharmander());
-        }
-        if (!data.bulbasaur) {
-            store.dispatch(actions.getBulbasaur());
+        if (!data.squirtle || !data.charmander || !data.bulbasaur) {
+            setRefresh(!refresh);
         }
     }, [data.squirtle, data.charmander, data.bulbasaur]);
 

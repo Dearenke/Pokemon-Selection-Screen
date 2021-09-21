@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './index.css';
 
 function Pokemon(props) {
     const { data = {}, style = {}, checked = false } = props;
-
     return (
         <div className={`sprites ${checked ? ' checked' : ''}`} style={{ ...style }}>
             <div style={{ width: 140 }}>
@@ -32,4 +31,12 @@ function Pokemon(props) {
     );
 }
 
-export default Pokemon;
+const isEqual = (prePorps, nextProps) => {
+    if (prePorps.checked === nextProps.checked) {
+        return true;
+    }
+    return false;
+
+};
+
+export default memo(Pokemon, isEqual);
